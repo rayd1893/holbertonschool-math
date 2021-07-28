@@ -2,6 +2,22 @@
 #include "holberton.h"
 
 /**
+ * _abs - Absolute value
+ * @number: Number
+ *
+ * Return: Always positive
+ */
+int _abs(int number)
+{
+	if (number < 0)
+		return (number * -1);
+
+	else
+		return (number);
+}
+
+
+/**
  * display_complex_number - Print real number and imaginary number
  * @c: Struct for complex number
  *
@@ -9,12 +25,40 @@
  */
 void display_complex_number(complex c)
 {
-	if (c.im == 0)
-		printf("%d\n", c.re);
+	if (c.re != 0)
+	{
+		printf("%d", c.re);
 
-	else if (c.re == 0)
-		printf("%di\n", c.im);
+		if (c.im != 0)
+		{
+			if (c.im < 0)
+				printf(" - ");
+
+			else
+				printf(" + ");
+
+			if (_abs(c.im) == 1)
+				printf("i");
+			else
+				printf("%di", _abs(c.im));
+		}
+	}
 
 	else
-		printf("%d + %di\n", c.re, c.im);
+	{
+		if (c.im == 0)
+			printf("0");
+
+		else if (c.im == 1)
+			printf("i");
+
+		else if (c.im == -1)
+			printf("-i");
+
+		else
+			printf("%di", c.im);
+	}
+
+	printf("\n");
+
 }
