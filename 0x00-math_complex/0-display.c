@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include "holberton.h"
-
+/**
+ * is_double - Evaluate if number is double
+ * @number: number to evaluate
+ *
+ * Return: 0 is not double and 1 is double
+ */
 int is_double(double number)
 {
 	int value = number;
@@ -37,7 +42,10 @@ double _abs(double number)
  */
 void display_complex_number(complex c)
 {
-	if (c.re != 0)
+
+	if (c.re == 0 && c.im == 0)
+		printf("0");
+	else
 	{
 		if (is_double(c.re))
 			printf("%.1f", c.re);
@@ -48,10 +56,8 @@ void display_complex_number(complex c)
 		{
 			if (c.im < 0)
 				printf(" - ");
-
 			else
 				printf(" + ");
-
 			if (_abs(c.im) == 1)
 				printf("i");
 			else
@@ -61,34 +67,6 @@ void display_complex_number(complex c)
 				else
 					printf("%.0fi", _abs(c.im));
 			}
-		}
-	}
-
-	else
-	{
-		if (c.im == 0)
-			printf("0");
-
-		else
-		{
-			printf("0");
-
-			if (c.im < 0)
-				printf(" - ");
-
-			else
-				printf(" + ");
-
-			if (_abs(c.im) == 1)
-				printf("i");
-			else
-			{
-				if (is_double(c.im))
-					printf("%.1fi", _abs(c.im));
-				else
-					printf("%.0fi", _abs(c.im));
-			}
-
 		}
 	}
 
