@@ -10,7 +10,7 @@
 
 double modulus(complex c)
 {
-	int a, b;
+	double a, b;
 
 	a = c.re;
 	b = c.im;
