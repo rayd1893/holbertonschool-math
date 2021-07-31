@@ -9,8 +9,8 @@
  */
 double argument(complex c)
 {
-	int a = c.re;
-	int b = c.im;
+	double a = c.re;
+	double b = c.im;
 	double arg;
 
 	if (a == 0)
