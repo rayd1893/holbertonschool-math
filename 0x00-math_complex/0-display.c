@@ -49,14 +49,22 @@ void display_complex_number(complex c)
 		if (c.im == 0)
 			printf("0");
 
-		else if (c.im == 1)
-			printf("i");
-
-		else if (c.im == -1)
-			printf("-i");
-
 		else
-			printf("%di", c.im);
+		{
+			printf("0");
+
+			if (c.im < 0)
+				printf(" - ");
+
+			else
+				printf(" + ");
+
+			if (_abs(c.im) == 1)
+				printf("i");
+			else
+				printf("%di", _abs(c.im));
+
+		}
 	}
 
 	printf("\n");
