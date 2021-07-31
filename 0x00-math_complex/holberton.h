@@ -1,5 +1,6 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
+#define PI 3.14159265358979323846
 
 /**
  * struct complex - Struct for number complex
@@ -17,5 +18,6 @@ typedef struct complex
 void display_complex_number(complex c);
 complex conjugate(complex c);
 double modulus(complex c);
+double argument(complex c);
 
 #endif
