@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 /**
- * Struct cell - Struct for sequence heron
+ * struct cell - Struct for sequence heron
  * @elt: Number
  * @next: struct type cell
  *
